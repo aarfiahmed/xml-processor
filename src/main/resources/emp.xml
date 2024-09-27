@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<employees>
+    <employee>
+        <name>Aarfi Siddique</name>
+        <salary>1000</salary>
+        <address>
+            <city>Noida</city>
+            <country>India</country>
+        </address>
+    </employee>
+    <employee>
+        <name>John</name>
+        <salary>2000</salary>
+        <address>
+            <city>Delhi</city>
+            <country>India</country>
+        </address>
+    </employee>
+</employees>
+
