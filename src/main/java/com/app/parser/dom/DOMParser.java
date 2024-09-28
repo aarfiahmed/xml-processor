@@ -1,4 +1,4 @@
-package com.app;
+package com.app.parser.dom;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
