@@ -13,7 +13,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.app.constant.AppConstant.EMPLOYEE_ATTRIBUTE_NAME;
+import static com.app.constant.AppConstant.EMPLOYEE_ATTRIBUTE;
 
 public class DOMParser implements XmlParser {
     private final List<Employee> employees = new ArrayList<>();
@@ -24,7 +24,7 @@ public class DOMParser implements XmlParser {
         Document parse = documentBuilder.parse(this.getClass().getClassLoader().getResourceAsStream(fileName));
         parse.getDocumentElement().normalize();
         Element root = parse.getDocumentElement();
-        NodeList elementsByTagName = root.getElementsByTagName(EMPLOYEE_ATTRIBUTE_NAME);
+        NodeList elementsByTagName = root.getElementsByTagName(EMPLOYEE_ATTRIBUTE);
         for (int i = 0; i < elementsByTagName.getLength(); i++) {
             Node item = elementsByTagName.item(i);
             if (item.getNodeType() == Node.ELEMENT_NODE) {

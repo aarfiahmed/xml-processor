@@ -12,4 +12,8 @@ public class Employee {
     String salary;
     String city;
     String country;
+
+    public String convertInCSVFormat(){
+        return name+" , "+salary+" , "+city+" , "+country;
+    }
 }

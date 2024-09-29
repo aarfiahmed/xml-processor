@@ -8,7 +8,7 @@ import org.xml.sax.helpers.DefaultHandler;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.app.constant.AppConstant.EMPLOYEE_ATTRIBUTE_NAME;
+import static com.app.constant.AppConstant.EMPLOYEE_ATTRIBUTE;
 
 public class EmployeeDefaultParser extends DefaultHandler {
     @Getter
@@ -22,7 +22,7 @@ public class EmployeeDefaultParser extends DefaultHandler {
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) {
-        if (qName.equalsIgnoreCase(EMPLOYEE_ATTRIBUTE_NAME)) {
+        if (qName.equalsIgnoreCase(EMPLOYEE_ATTRIBUTE)) {
             employee = new Employee();
         } else if (qName.equalsIgnoreCase("name")) {
             name = true;
@@ -57,7 +57,7 @@ public class EmployeeDefaultParser extends DefaultHandler {
 
     @Override
     public void endElement(String uri, String localName, String qName) {
-        if (qName.equalsIgnoreCase(EMPLOYEE_ATTRIBUTE_NAME)) {
+        if (qName.equalsIgnoreCase(EMPLOYEE_ATTRIBUTE)) {
             employees.add(employee);
         }
     }

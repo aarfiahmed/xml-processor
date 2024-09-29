@@ -12,7 +12,7 @@ import javax.xml.stream.events.XMLEvent;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.app.constant.AppConstant.EMPLOYEE_ATTRIBUTE_NAME;
+import static com.app.constant.AppConstant.EMPLOYEE_ATTRIBUTE;
 
 public class StaxParser implements XmlParser {
     private final List<Employee> employees = new ArrayList<>();
@@ -29,7 +29,7 @@ public class StaxParser implements XmlParser {
 
                 switch (elementName) {
 
-                    case EMPLOYEE_ATTRIBUTE_NAME:
+                    case EMPLOYEE_ATTRIBUTE:
                         System.out.println("---------------------------");
                         break;
                     case "name":
@@ -52,7 +52,7 @@ public class StaxParser implements XmlParser {
                 }
             } else if (xmlEvent.getEventType() == XMLStreamConstants.END_ELEMENT) {
                 String endElement = xmlEvent.asEndElement().getName().getLocalPart();
-                if (endElement.equalsIgnoreCase(EMPLOYEE_ATTRIBUTE_NAME)) {
+                if (endElement.equalsIgnoreCase(EMPLOYEE_ATTRIBUTE)) {
                     employees.add(e);
                     System.out.println(name);
                     System.out.println(salary);
