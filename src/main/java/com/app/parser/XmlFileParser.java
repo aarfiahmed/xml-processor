@@ -8,5 +8,6 @@ public class XmlFileParser {
     public static void main(String[] args) throws Exception {
         XmlParser parser= new StaxParser();
         parser.parseXml(XML_FILE_NAME);
+        System.out.println(parser.getDetails());
     }
 }
