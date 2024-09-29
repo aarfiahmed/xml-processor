@@ -1,7 +1,7 @@
 package com.app.constant;
 
 public class AppConstant {
-    public static final String CSV_FILE_NAME = "/csv/employee.csv";
+    public static final String CSV_FILE_NAME = "employee.csv";
 
     private AppConstant() {
     }
