@@ -1,16 +1,16 @@
 package com.app.parser.sax;
 
+import com.app.parser.XmlParser;
+
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
 import static com.app.constant.AppConstant.XML_FILE_NAME;
 
-public class XmlSaxParser {
-    public static void main(String[] args) throws Exception {
-        new XmlSaxParser().processFile();
-    }
+public class SaxParser implements XmlParser {
 
-    public void processFile()throws Exception{
+    @Override
+    public void parseXml(String fileName) throws Exception {
         SAXParser saxParser = SAXParserFactory.newInstance().newSAXParser();
         saxParser.parse(this.getClass().getClassLoader().getResourceAsStream(XML_FILE_NAME), new EmployeeDefaultParser());
     }

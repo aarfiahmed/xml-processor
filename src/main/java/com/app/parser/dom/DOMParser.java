@@ -1,5 +1,6 @@
 package com.app.parser.dom;
 
+import com.app.parser.XmlParser;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -9,18 +10,12 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import static com.app.constant.AppConstant.EMPLOYEE_ATTRIBUTE_NAME;
-import static com.app.constant.AppConstant.XML_FILE_NAME;
 
-public class DOMParser {
+public class DOMParser implements XmlParser {
 
-    public static void main(String[] args) throws Exception {
-
-        new DOMParser().processData(XML_FILE_NAME);
-    }
-
-
-    private  void processData(String fileName) throws Exception {
-       DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+    @Override
+    public void parseXml(String fileName) throws Exception {
+        DocumentBuilder documentBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
         Document parse = documentBuilder.parse(this.getClass().getClassLoader().getResourceAsStream(fileName));
         parse.getDocumentElement().normalize();
         Element root = parse.getDocumentElement();
