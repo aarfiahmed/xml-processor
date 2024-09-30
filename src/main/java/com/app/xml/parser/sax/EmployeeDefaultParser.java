@@ -1,4 +1,4 @@
-package com.app.parser.sax;
+package com.app.xml.parser.sax;
 
 import com.app.domain.Employee;
 import lombok.Getter;

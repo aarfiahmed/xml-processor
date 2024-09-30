@@ -1,7 +1,7 @@
-package com.app.parser.dom;
+package com.app.xml.parser.dom;
 
 import com.app.domain.Employee;
-import com.app.parser.XmlParser;
+import com.app.xml.parser.XmlParser;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;

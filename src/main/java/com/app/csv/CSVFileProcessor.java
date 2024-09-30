@@ -2,8 +2,8 @@ package com.app.csv;
 
 import com.app.constant.AppConstant;
 import com.app.domain.Employee;
-import com.app.parser.XmlFileParser;
-import com.app.parser.sax.SaxParser;
+import com.app.xml.XmlFileProcessor;
+import com.app.xml.parser.sax.SaxParser;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -15,7 +15,7 @@ import static com.app.constant.AppConstant.*;
 
 public class CSVFileProcessor {
     public static void main(String[] args) throws Exception {
-        new CSVFileProcessor().addEmployee(new XmlFileParser().getDataFromXML(new SaxParser()));
+        new CSVFileProcessor().addEmployee(new XmlFileProcessor().getDataFromXML(new SaxParser()));
     }
 
     public void addEmployee(List<Employee> employees) {

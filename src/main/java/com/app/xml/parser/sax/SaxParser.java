@@ -1,7 +1,7 @@
-package com.app.parser.sax;
+package com.app.xml.parser.sax;
 
 import com.app.domain.Employee;
-import com.app.parser.XmlParser;
+import com.app.xml.parser.XmlParser;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;

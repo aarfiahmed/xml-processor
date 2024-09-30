@@ -1,4 +1,4 @@
-package com.app.parser;
+package com.app.xml.parser;
 
 import com.app.domain.Employee;
 

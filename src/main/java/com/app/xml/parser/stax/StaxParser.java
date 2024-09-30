@@ -1,7 +1,7 @@
-package com.app.parser.stax;
+package com.app.xml.parser.stax;
 
 import com.app.domain.Employee;
-import com.app.parser.XmlParser;
+import com.app.xml.parser.XmlParser;
 
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
